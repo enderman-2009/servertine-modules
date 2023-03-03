@@ -19,7 +19,7 @@ module.onTouch = function()
   thisInput.text = userTable.test
   thisInput.onInputFinished = function()
     userTable.test = thisInput.text
-    database.update(["test"])
+    database.update({"test"})
   end
 end
 
