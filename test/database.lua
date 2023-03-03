@@ -15,7 +15,7 @@ module.init = function(usTable)
 end
 
 module.onTouch = function()
-  local thisInput = window:addChild(GUI.Input(2,2,16,1,0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, "Hello world", "Placeholder text"))
+  local thisInput = window:addChild(GUI.input(2,2,16,1,0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, "Hello world", "Placeholder text"))
   thisInput.text = userTable.test
   thisInput.onInputFinished = function()
     userTable.test = thisInput.text
