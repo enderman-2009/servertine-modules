@@ -21,7 +21,7 @@ module.onTouch = function()
     userTable.testBox = thisInput.text
     database.update({"testBox"})
   end
-  local thisInput = window:addChild(GUI.input(2,2,16,1,0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, "Hello world", "Placeholder text")) --set textbox
+  local thisInput = window:addChild(GUI.input(2,0,16,1,0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, "Hello world", "Placeholder text")) --set textbox
   thisInput.text = userTable.testBox
   thisInput.onInputFinished = function()
     userTable.testDrop = thisInput.text
