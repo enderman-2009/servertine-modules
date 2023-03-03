@@ -8,7 +8,7 @@ local workspace, window, loc, database, style = table.unpack({...})
 module.name = "test"
 module.table = {"test"}
 module.debug = false
-module.config = {
+module.config = {}
 
 module.init = function(usTable)
   userTable = usTable
