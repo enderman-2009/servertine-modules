@@ -6,7 +6,7 @@ local module = {}
 module.name = "test"
 module.commands = {"test"}
 module.skipcrypt = {"test"}
-module.table = {["test"]=""}
+module.table = {["testbox"]="", ["testdrop"]=""}
 module.debug = false
 function module.init(settings, doors, serverCommands)
   settingstable = settings
