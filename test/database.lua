@@ -22,7 +22,7 @@ module.onTouch = function()
     database.update({"testBox"})
   end
   local testDrop = window:addChild(GUI.comboBox(2,0,16,3,style.containerComboBack,style.containerComboText,style.containerComboArrowBack,style.containerComboArrowText))  --sets dropdown
-  for i, v in pairs(userTable.testDrop)
+  for i, v in pairs(userTable.testDrop) do
 	testDrop:addItem(v)
   end
   database.update({"testDrop"})
