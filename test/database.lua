@@ -23,7 +23,7 @@ module.onTouch = function()
     box.onInputFinished = function()
       userTable.testBox[i] = box.text
       database.update({"testBox"})
-	end
+    end
   end
 end
 
