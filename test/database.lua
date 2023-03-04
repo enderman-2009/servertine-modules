@@ -16,7 +16,7 @@ end
 
 module.onTouch = function()
   local i2 = 4
-  for i, v in pairs(usertable.testBox)
+  for i, v in pairs(usertable.testBox) do
     local i2 = i2-2
     local box = window:addChild(GUI.input(2,i2,16,1,style.passInputBack,style.passInputText,style.passInputPlaceholder,style.passInputFocusBack,style.passInputFocusText,"text1","textBox1")) --sets textbox
     box.text = v
