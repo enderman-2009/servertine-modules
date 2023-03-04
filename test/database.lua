@@ -6,7 +6,7 @@ local userTable
 local workspace, window, loc, database, style = table.unpack({...})
 
 module.name = "test"
-module.table = {"testBox1","textBox2"}
+module.table = {"testBox"}
 module.debug = false
 module.config = {}
 
@@ -15,22 +15,20 @@ module.init = function(usTable)
 end
 
 module.onTouch = function()
-  local box1 = window:addChild(GUI.input(2,2,16,1,style.passInputBack,style.passInputText,style.passInputPlaceholder,style.passInputFocusBack,style.passInputFocusText,"text1","textBox1")) --sets textbox
-  box1.text = userTable.testBox1
-  box1.onInputFinished = function()
-    userTable.testBox1 = box1.text
-    database.update({"testBox1"})
-  end
-  local box2 = window:addChild(GUI.input(2,0,16,1,style.passInputBack,style.passInputText,style.passInputPlaceholder,style.passInputFocusBack,style.passInputFocusText,"text2","textBox2")) --sets textbox
-  box2.text = userTable.testBox2
-  box2.onInputFinished = function()
-    userTable.testBox2 = box2.text
-    database.update({"testBox2"})
+  local i2 = 4
+  for i, v in pairs(usertable.testBox)
+    local i2 = i2-2
+    local box = window:addChild(GUI.input(2,i2,16,1,style.passInputBack,style.passInputText,style.passInputPlaceholder,style.passInputFocusBack,style.passInputFocusText,"text1","textBox1")) --sets textbox
+    box.text = v
+    box.onInputFinished = function()
+      userTable.testBox[i] = box.text
+      database.update({"testBox"})
+	end
   end
 end
 
 module.close = function()
-  return {"testBox1","testBox2"}
+  return {"testBox"}
 end
 
 return module
