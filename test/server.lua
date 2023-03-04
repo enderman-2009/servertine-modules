@@ -4,9 +4,9 @@ local server = {}
 
 local module = {}
 module.name = "test"
-module.commands = {"test"}
-module.skipcrypt = {"test"}
-module.table = {["testbox"]="", ["testDrop"]={"hi","hello","world"}}
+module.commands = {}
+module.skipcrypt = {}
+module.table = {["testBox1"]="", ["testBox2"]=""}
 module.debug = false
 function module.init(settings, doors, serverCommands)
   settingstable = settings
